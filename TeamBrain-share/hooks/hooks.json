@@ -22,7 +22,7 @@
         },
         {
           "type": "command",
-          "command": "bash /Users/m1/projects/V3p1meta-harness/TeamBrain-share/scripts/eng-gate-inject.sh",
+          "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/eng-gate-inject.sh",
           "timeout": 15
         }
       ]
@@ -39,7 +39,7 @@
         },
         {
           "type": "command",
-          "command": "bash /Users/m1/projects/V3p1meta-harness/TeamBrain-share/scripts/eng-gate-exam.sh",
+          "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/eng-gate-exam.sh",
           "timeout": 15
         }
       ]
