@@ -22,5 +22,17 @@
         }
       ]
     }
+  ],
+  "Stop": [
+    {
+      "matcher": ".*",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "bash /Users/m1/.claude/scripts/hooks/laziness-self-report.sh",
+          "timeout": 10
+        }
+      ]
+    }
   ]
 }
