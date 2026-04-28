@@ -1,0 +1,17 @@
+{
+  "name": "teambrain-share",
+  "version": "0.1.0",
+  "description": "LAN knowledge sharing plugin that uses TeamAgent CLI as the local rule engine and keeps rsync-based teammate propagation.",
+  "author": {
+    "name": "Team",
+    "email": "team@example.com"
+  },
+  "keywords": [
+    "teamagent",
+    "teambrain",
+    "claude-code",
+    "knowledge-sharing",
+    "lan-sync",
+    "rules"
+  ]
+}

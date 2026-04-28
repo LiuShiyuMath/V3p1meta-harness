@@ -1,0 +1,26 @@
+{
+  "SessionStart": [
+    {
+      "matcher": ".*",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "bash /Users/m1/projects/V3p1meta-harness/TeamBrain-share/scripts/session-start.sh",
+          "timeout": 90
+        }
+      ]
+    }
+  ],
+  "UserPromptSubmit": [
+    {
+      "matcher": ".*",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "bash /Users/m1/projects/V3p1meta-harness/TeamBrain-share/scripts/query-teambrain-share.sh",
+          "timeout": 30
+        }
+      ]
+    }
+  ]
+}
