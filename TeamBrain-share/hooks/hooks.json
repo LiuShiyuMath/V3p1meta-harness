@@ -19,6 +19,11 @@
           "type": "command",
           "command": "bash /Users/m1/projects/V3p1meta-harness/TeamBrain-share/scripts/query-teambrain-share.sh",
           "timeout": 30
+        },
+        {
+          "type": "command",
+          "command": "bash /Users/m1/projects/V3p1meta-harness/TeamBrain-share/scripts/eng-gate-inject.sh",
+          "timeout": 15
         }
       ]
     }
@@ -31,6 +36,11 @@
           "type": "command",
           "command": "bash /Users/m1/.claude/scripts/hooks/laziness-self-report.sh",
           "timeout": 10
+        },
+        {
+          "type": "command",
+          "command": "bash /Users/m1/projects/V3p1meta-harness/TeamBrain-share/scripts/eng-gate-exam.sh",
+          "timeout": 15
         }
       ]
     }
