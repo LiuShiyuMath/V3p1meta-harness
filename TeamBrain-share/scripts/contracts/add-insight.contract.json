@@ -1,0 +1,25 @@
+{
+  "actor": "add-insight.sh",
+  "purpose": "Append one insight to LAN index, write one raw payload, attempt best-effort sync + import.",
+  "must": [
+    "insights/index.json mtime/size/sha256 must change",
+    "insights_count must increase by exactly 1 (jq '.insights | length')",
+    "insights/raw/<RAW_HASH>.json must be created (exactly 1 new file)",
+    "stdout last line must match: ^\\[teambrain-share\\] added [0-9a-f]{64}$",
+    "exit_code must be 0"
+  ],
+  "may": [
+    "logs/teambrain-share.log appended by best-effort rsync-merge.sh / teamagent-import.sh subprocesses",
+    "cache/ directory created if not present"
+  ],
+  "must_not": [
+    "delete any existing file in insights/ or raw/",
+    "write to any path outside ~/.claude-teambrain-share/",
+    "open new rsync/ssh/teamagent socket when teammates.json is missing",
+    "invoke teamagent ingest when teamagent binary is missing"
+  ],
+  "notes": [
+    "stdout reports CONTENT_HASH (hash of name|when|description), but the raw file on disk uses RAW_HASH (hash of payload). These are different fields by design — do not flag as anomaly.",
+    "Idempotent on identical name+when+description (CONTENT_HASH dedup): a duplicate call should leave insights_count unchanged and create no new raw file."
+  ]
+}
