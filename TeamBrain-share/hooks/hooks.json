@@ -5,7 +5,7 @@
       "hooks": [
         {
           "type": "command",
-          "command": "bash /Users/m1/projects/V3p1meta-harness/TeamBrain-share/scripts/session-start.sh",
+          "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/session-start.sh",
           "timeout": 90
         }
       ]
@@ -17,7 +17,7 @@
       "hooks": [
         {
           "type": "command",
-          "command": "bash /Users/m1/projects/V3p1meta-harness/TeamBrain-share/scripts/query-teambrain-share.sh",
+          "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/query-teambrain-share.sh",
           "timeout": 30
         },
         {
@@ -41,6 +41,18 @@
           "type": "command",
           "command": "bash /Users/m1/projects/V3p1meta-harness/TeamBrain-share/scripts/eng-gate-exam.sh",
           "timeout": 15
+        }
+      ]
+    }
+  ],
+  "PreToolUse": [
+    {
+      "matcher": "Edit|Write|MultiEdit",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "node ${CLAUDE_PLUGIN_ROOT}/scripts/hooks/gateguard-fact-force.js",
+          "timeout": 5
         }
       ]
     }
