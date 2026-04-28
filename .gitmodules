@@ -1,0 +1,3 @@
+[submodule "insights-share"]
+	path = insights-share
+	url = https://github.com/liush2yuxjtu/insights-share-lan.git
