@@ -9,3 +9,5 @@ This repository inherits the user-level rules from `~/.codex/AGENTS.md` and
 - Keep `CLAUDE.md` as a symbolic link to `AGENTS.md`.
 - Do not duplicate user-level rules here unless this repository needs a real
   delta.
+- For parent-repo commits that involve submodules, follow
+  `docs/rules/parent-repo-git-commits.md`.
